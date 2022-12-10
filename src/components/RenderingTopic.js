@@ -1,14 +1,25 @@
-import React from 'react'
 
-const RenderingTopic = () => {
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Home = () => {
   return (
-    <div id="rendering-div">
-      <h3>Rendering in React</h3>
-      <button id="rendering-back-button">
-        Back
-      </button>
+    <div id="home-div">
+      <ul>
+        <Link to='/'>
+          <li>
+            <h2 id="home-item">Home</h2>
+          </li>
+        </Link>
+        <Link to='/topics'>
+          <li>
+            <h2 id="topics-item">Topics</h2>
+          </li>
+        </Link>
+      </ul>
+      <hr />
     </div>
-  )
-}
+  );
+};
 
-export default RenderingTopic
+export default Home;
